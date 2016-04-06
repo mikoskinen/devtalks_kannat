@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RethinkDB"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="650" Width="525">
     <Grid>
         
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox x:Name="Id" Margin="12"/>
+            <Button x:Name="Add" Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Add_OnClick" Margin="12"/>
+            <Button x:Name="Update" Content="Update" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Update_OnClick" Margin="12"/>
+            <Button x:Name="Listen" Content="Listen" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Listen_OnClick" Margin="12"/>
+            <RichTextBox Height="400" x:Name="Log"/>
+        </StackPanel>
+
     </Grid>
 </Window>

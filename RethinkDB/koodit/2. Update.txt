@@ -1,0 +1,7 @@
+            db.Table("devtalks")
+                .Get(this.Id.Text)
+                .Update(o => new
+                {
+                    readcount = o["readcount"] + 1
+                })
+                .Run(conn);

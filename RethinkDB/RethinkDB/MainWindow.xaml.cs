@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using RethinkDb.Driver;
+using RethinkDb.Driver.Net;
 
 namespace RethinkDB
 {
@@ -20,9 +9,37 @@ namespace RethinkDB
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static RethinkDb.Driver.RethinkDB db;
+        private static Connection conn;
+
         public MainWindow()
         {
             InitializeComponent();
+            db = new RethinkDb.Driver.RethinkDB();
+            conn = db.Connection()
+                .Hostname("localhost")
+                .Db("devtalks")
+                .Port(RethinkDBConstants.DefaultPort)
+                .Timeout(60)
+                .Connect();
+        }
+
+
+        private void Add_OnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void Update_OnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private async void Listen_OnClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
+
 }

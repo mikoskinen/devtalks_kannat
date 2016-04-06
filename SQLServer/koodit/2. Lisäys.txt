@@ -1,0 +1,2 @@
+            var id = int.Parse(this.textBox1.Text);
+			Database.Open().SaveRead(id);

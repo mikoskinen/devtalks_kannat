@@ -1,0 +1,5 @@
+                var persons = session.Query<Person>();
+                foreach (var person in persons)
+                {
+                    this.richTextBox1.AppendText($"{person.Name}, {person.City}{Environment.NewLine}");
+                }

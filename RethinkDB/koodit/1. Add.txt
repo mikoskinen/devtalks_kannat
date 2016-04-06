@@ -1,0 +1,4 @@
+            var id = this.Id.Text;
+            db.Table("devtalks")
+                .Insert(new ArticleReadCount() { id = id, readcount = 1 })
+                .RunNoReply(conn);

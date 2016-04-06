@@ -1,0 +1,10 @@
+                using (var session = store.OpenSession())
+                {
+                    var personHistory = session.Advanced.GetRevisionsFor<Person>(personId, 0, 25);
+
+                    this.richTextBox1.Text = "";
+                    foreach (var person in personHistory)
+                    {
+                        this.richTextBox1.AppendText($"{person.City}{Environment.NewLine}");
+                    }
+                }

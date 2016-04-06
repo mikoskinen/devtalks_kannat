@@ -1,0 +1,11 @@
+
+                using (var session = store.OpenSession()) 
+                {
+                    var person = session.Query<Person>().First(x => x.Name.StartsWith("M"));
+                    personId = person.Id;
+
+                    person.City = this.textBox1.Text;
+
+                    session.Store(person); 
+                    session.SaveChanges(); 
+                }

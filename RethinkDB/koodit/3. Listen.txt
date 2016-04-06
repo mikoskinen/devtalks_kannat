@@ -1,0 +1,9 @@
+            var feed = await db.Table("devtalks")
+                .Changes()
+                .RunChangesAsync<ArticleReadCount>(conn);
+
+            while (await feed.MoveNextAsync())
+            {
+                var message = feed.Current;
+                Log.AppendText(message.NewValue.id + " " + message.NewValue.readcount + Environment.NewLine);
+            }

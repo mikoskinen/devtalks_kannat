@@ -1,0 +1,5 @@
+    public class ArticleReadCount
+    {
+        public string id { get; set; }
+        public int readcount { get; set; }
+    }

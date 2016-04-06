@@ -1,0 +1,8 @@
+
+            using (var session = _store.LightweightSession())
+            {
+                var person = new Person() { City = textBox2.Text, Name = textBox1.Text };
+                session.Store(person);
+
+                session.SaveChanges();
+            }
