@@ -18,7 +18,7 @@ namespace postgresql
         public Form1()
         {
             InitializeComponent();
-            _store = DocumentStore.For("host=192.168.1.37;database=devtalks;password=devtalks;username=devtalks");
+            _store = DocumentStore.For("host=192.168.43.210;database=devtalks;password=devtalks;username=devtalks");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,9 +31,10 @@ namespace postgresql
             this.richTextBox1.Text = "";
             using (var session = _store.LightweightSession())
             {
-            
+
             }
         }
     }
+
 
 }

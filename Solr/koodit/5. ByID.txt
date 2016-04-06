@@ -1,0 +1,1 @@
+http://devtalks:8983/solr/aukio/select?q=Id:216893&fl=Title,Category,Content

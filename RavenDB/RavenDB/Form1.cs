@@ -1,4 +1,7 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Linq;
+using System.Windows.Forms;
+using Raven.Client.Bundles.Versioning;
 using Raven.Client.Document;
 
 namespace RavenDB
@@ -19,6 +22,7 @@ namespace RavenDB
             {
                 store.Initialize();
 
+       
             }
         }
 
@@ -27,6 +31,7 @@ namespace RavenDB
             using (var store = new DocumentStore { Url = "http://devtalks:8080/", DefaultDatabase = "devtalks" })
             {
                 store.Initialize();
+
             }
         }
     }

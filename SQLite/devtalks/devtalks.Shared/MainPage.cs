@@ -36,7 +36,7 @@ namespace devtalks
             await todoTable.InsertAsync(todoItem);
             items.Add(todoItem);
 
-            await SyncAsync(); // offline sync
+            //await SyncAsync(); // offline sync
         }
 
         private async Task RefreshTodoItems()

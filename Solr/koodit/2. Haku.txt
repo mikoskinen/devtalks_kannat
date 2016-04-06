@@ -1,0 +1,1 @@
+http://devtalks:8983/solr/aukio/select?q=Title%3ASel%C3%A4nne&wt=json&indent=true&sort=InsertDate%20desc&fl=Category,Title,Content

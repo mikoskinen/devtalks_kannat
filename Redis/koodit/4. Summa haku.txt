@@ -1,0 +1,1 @@
+zrevrange summa 0 -1 withscores
